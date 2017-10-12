@@ -1,0 +1,17 @@
+<section class="hero is-dark">
+    <div class="hero-body">
+        <div class="container">
+        <h1 class="title">
+            My very own reddit client
+        </h1>
+        </div>
+    </div>
+</section>
+
+<div class="container is-fluid">
+    <section class="section">
+        <div *ngFor="let post of posts">
+            <ms-post [post]=post></ms-post>
+        </div>
+    </section>
+</div>
