@@ -1,3 +1,4 @@
+// import { Reddit } from 'typings/reddit';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -7,8 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PostComponent implements OnInit {
   @Input() post: Post;
+  showDetailedPost = false;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     this.post.data.previewUrl = this.searchPreviewImageToDisplay();
@@ -21,6 +23,9 @@ export class PostComponent implements OnInit {
     return undefined;
   }
 
+  onClickShowDetailedPost() {
+    this.showDetailedPost = !this.showDetailedPost;
+  }
 }
 
 interface Post {

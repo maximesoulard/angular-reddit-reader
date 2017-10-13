@@ -1,15 +1,27 @@
-<div class="box">
-    <article class="media">
-        <figure class="media-left">
-            <!--<img [src]=post.data.previewUrl class='ms-preview'/>-->
-            <p class="image is-64x64">
-                <img [src]=post.data.previewUrl>
-            </p>
-        </figure>
-        <div class='media-content'>
-            <div class='content'>
-                {{ post.data.title }}
-            </div>
+<article class="media">
+    <figure class="media-left">
+        <p class="image is-64x64">
+            <img [src]=post.data.previewUrl style="max-width: 100%; max-height: 100%;">
+        </p>
+    </figure>
+    <div class="media-content" (click)="onClickShowDetailedPost()">
+        <div class="content">
+        <p>
+            {{ post.data.title }}
+            <br>
+            <strong>{{ post.data.subreddit_name_prefixed }}</strong><small style="margin-left: 1em;">Posted by {{ post.data.author }}</small>
+        </p>
         </div>
-    </article>
-</div>
+        <nav class="level is-mobile">
+        <div class="level-left">
+            <span><small><a>Comments</a></small></span>
+            <span style="margin-left: 1em;"><small><a>Ups : {{ post.data.ups }}</a></small></span>
+        </div>
+        </nav>
+    </div>
+    <div class="media-right">
+        <button class="delete"></button>
+    </div>
+</article>
+
+<ms-detailed-post *ngIf=showDetailedPost></ms-detailed-post>

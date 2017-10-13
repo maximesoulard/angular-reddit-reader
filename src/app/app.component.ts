@@ -4,8 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <ms-client></ms-client>
-  `,
-  styleUrls: ['./app.component.css']
+  `
 })
 export class AppComponent {
   title = 'app';
