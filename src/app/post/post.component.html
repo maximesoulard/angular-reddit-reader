@@ -1,13 +1,13 @@
 <article class="media">
     <figure class="media-left">
         <p class="image is-64x64">
-            <img [src]=post.data.previewUrl style="max-width: 100%; max-height: 100%;">
+            <img [src]=post.data.thumbnail style="max-width: 100%; max-height: 100%;" (click)="onClickShowDetailedPost()">
         </p>
     </figure>
-    <div class="media-content" (click)="onClickShowDetailedPost()">
+    <div class="media-content">
         <div class="content">
         <p>
-            {{ post.data.title }}
+            <a [href]="post.data.url">{{ post.data.title }}</a>
             <br>
             <strong>{{ post.data.subreddit_name_prefixed }}</strong><small style="margin-left: 1em;">Posted by {{ post.data.author }}</small>
         </p>
@@ -20,8 +20,8 @@
         </nav>
     </div>
     <div class="media-right">
-        <button class="delete"></button>
+        
     </div>
 </article>
 
-<ms-detailed-post *ngIf=showDetailedPost></ms-detailed-post>
+<ms-detailed-post *ngIf=showDetailedPost [post]="post"></ms-detailed-post>

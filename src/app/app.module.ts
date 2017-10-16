@@ -9,13 +9,15 @@ import { PostComponent } from './post/post.component';
 import { DetailedPostComponent } from './detailed-post/detailed-post.component';
 
 import { SubredditService } from './api/subreddit.service';
+import { LeftMenuComponent } from './left-menu/left-menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientComponent,
     PostComponent,
-    DetailedPostComponent
+    DetailedPostComponent,
+    LeftMenuComponent
   ],
   imports: [
     BrowserModule,

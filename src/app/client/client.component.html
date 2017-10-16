@@ -8,8 +8,11 @@
     </div>
 </section>
 
-<div class="">
-    <section class="" style="margin-right: 5em; margin-left: 5em;">
+<div class="columns" style="margin: 1em;">
+    <section class="column is-one-quarter">
+        <ms-left-menu></ms-left-menu>
+    </section>
+    <section class="column" style="">
         <div *ngFor="let post of posts" style="margin-bottom: 1em;">
             <ms-post [post]=post></ms-post>
         </div>

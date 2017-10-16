@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'ms-detailed-post',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detailed-post.component.css']
 })
 export class DetailedPostComponent implements OnInit {
-  @Input() post: Post;
+  @Input() post: any;
 
   constructor() { }
 

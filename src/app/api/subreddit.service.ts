@@ -10,4 +10,7 @@ export class SubredditService {
         return this.http.get('https://www.reddit.com/r/all/hot.json');
     }
 
+    getTrendingSubreddits() {
+        return this.http.get('https://www.reddit.com/api/trending_subreddits.json');
+    }
 }
