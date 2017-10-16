@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
+import { ROUTES } from './app.routes';
 
 import { SubredditService } from './api/subreddit.service';
 import { WindowService } from './api/window.service';
@@ -11,7 +15,7 @@ import { ClientComponent } from './client/client.component';
 import { PostComponent } from './post/post.component';
 import { DetailedPostComponent } from './detailed-post/detailed-post.component';
 import { LeftMenuComponent } from './left-menu/left-menu.component';
-
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,17 +23,20 @@ import { LeftMenuComponent } from './left-menu/left-menu.component';
     ClientComponent,
     PostComponent,
     DetailedPostComponent,
-    LeftMenuComponent
+    LeftMenuComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [
     SubredditService,
-    WindowService
+    WindowService,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

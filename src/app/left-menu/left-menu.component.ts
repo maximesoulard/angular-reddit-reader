@@ -21,11 +21,11 @@ export class LeftMenuComponent implements OnInit {
       });
   }
 
-  goTo(sub) {
-    this.subredditService.getSubredditUrl(sub)
-      .subscribe((url) => {
-        this.windowService.goTo(url);
-      });
-  }
+  // goTo(sub) {
+  //   this.subredditService.getSubredditUrl(sub)
+  //     .subscribe((url) => {
+  //       this.windowService.goTo(url);
+  //     });
+  // }
 
 }
