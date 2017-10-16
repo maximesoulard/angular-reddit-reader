@@ -12,7 +12,7 @@ export class ClientComponent implements OnInit {
   constructor(private subredditService: SubredditService) {}
 
   ngOnInit() {
-    this.subredditService.getNewPosts("/r/all").subscribe(response => {
+    this.subredditService.getNewPosts("/r/all/hot").subscribe(response => {
       // Read the result field from the JSON response.
       this.posts = response['data'].children;
     });

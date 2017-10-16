@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { SubredditService } from '../api/subreddit.service';
+import { WindowService } from '../api/window.service';
 
 @Component({
   selector: 'ms-detailed-post',
@@ -8,9 +10,12 @@ import { Component, OnInit, Input } from '@angular/core';
 export class DetailedPostComponent implements OnInit {
   @Input() post: any;
 
-  constructor() { }
+  constructor(private subredditService: SubredditService, private windowService: WindowService) { }
 
   ngOnInit() {
   }
 
+  goTo(url) {
+      this.windowService.goTo(url);
+  }
 }

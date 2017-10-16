@@ -2,7 +2,7 @@
   <h3 class="subtitle">Trending subreddits</h3>
   <div class="is-multiline">
     <span *ngFor="let sub of trendingSubreddits">
-      <a [href]="sub">{{ sub }}</a> <br />
+      <a [href]="" (click)=goTo(sub)>{{ sub }}</a> <br />
     </span>
   </div>
 </div>
