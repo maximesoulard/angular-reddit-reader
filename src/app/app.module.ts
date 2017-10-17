@@ -7,15 +7,19 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { ROUTES } from './app.routes';
 
+import { ApiConstantes } from './api/api.constantes';
+
 import { SubredditService } from './api/subreddit.service';
 import { WindowService } from './api/window.service';
+import { DomParserService } from './api/domparser.service';
+import { PostService } from './api/post.service';
 
 import { AppComponent } from './app.component';
 import { ClientComponent } from './client/client.component';
 import { PostComponent } from './post/post.component';
 import { DetailedPostComponent } from './detailed-post/detailed-post.component';
 import { LeftMenuComponent } from './left-menu/left-menu.component';
-import { HomeComponent } from './home/home.component';
+import { TrendingSubredditsComponent } from './trending-subreddits/trending-subreddits.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,7 @@ import { HomeComponent } from './home/home.component';
     PostComponent,
     DetailedPostComponent,
     LeftMenuComponent,
-    HomeComponent
+    TrendingSubredditsComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,10 @@ import { HomeComponent } from './home/home.component';
   providers: [
     SubredditService,
     WindowService,
-    {provide: LocationStrategy, useClass: HashLocationStrategy}
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
+    DomParserService,
+    ApiConstantes,
+    PostService
   ],
   bootstrap: [AppComponent],
 })
