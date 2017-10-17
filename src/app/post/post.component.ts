@@ -1,5 +1,6 @@
-// import { Reddit } from 'typings/reddit';
 import { Component, OnInit, Input } from '@angular/core';
+import { PostService } from '../api/post.service';
+import { WindowService } from '../api/window.service';
 
 @Component({
   selector: 'ms-post',
@@ -10,12 +11,22 @@ export class PostComponent implements OnInit {
   @Input() post: any;
   showDetailedPost = false;
 
-  constructor() {}
+  constructor(private postService: PostService, private windowService: WindowService) {}
 
   ngOnInit() {
+    this.post.isDisplayable = this.postService.isDisplayable(this.post);
   }
 
   onClickShowDetailedPost() {
     this.showDetailedPost = !this.showDetailedPost;
+  }
+  
+  goTo() {
+    if (this.post.isDisplayable) {
+      this.onClickShowDetailedPost();
+    }
+    else {
+      this.windowService.goTo(this.post.data.url);
+    }
   }
 }

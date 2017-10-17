@@ -1,0 +1,8 @@
+.detailed-content {
+    background-color: aliceblue;
+    width: 60%;
+    border: 0.1em dotted lightblue;
+    border-radius: 7px;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
