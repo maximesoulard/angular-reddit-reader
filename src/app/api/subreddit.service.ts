@@ -1,21 +1,17 @@
 import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-const BASE_URL = "https://www.reddit.com";
-const NEW = '/new';
-const API_EXTENSION = '.json';
-const SLASH_R_SLASH = "/r/";
-const R_ALL = BASE_URL.concat(SLASH_R_SLASH).concat('all').concat(API_EXTENSION);
+import { ApiConstantes } from './api.constantes';
 
 @Injectable()
 export class SubredditService {
 
-    constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient, private apiConstantes: ApiConstantes) { }
 
-    get(subreddit: string) {
+    get(subreddit: string, mode: string) {
         if (subreddit !== null) {
-            return this.getNewPosts('/r/'.concat(subreddit));   // TODO check if /r/ passed
+            const completeSubredditToLoad = `/r/${subreddit}/${mode !== null ? mode : this.apiConstantes.modeHot}`
+            return this.getPosts(completeSubredditToLoad);
         }
         else {
             return this.getRAll();
@@ -23,27 +19,22 @@ export class SubredditService {
     }
 
     getRAll() {
-        return this.http.get(R_ALL);
+        return this.http.get(this.apiConstantes.rAll);
     }
 
-    getNewPosts(subreddit: string) {
-        return this.http.get(BASE_URL
-            .concat(subreddit)
-            .concat(NEW)
-            .concat(API_EXTENSION));
+    getPosts(subreddit: string) {
+        const url = `${this.apiConstantes.baseUrl}${subreddit}${this.apiConstantes.apiExtension}`;
+        return this.http.get(url);
     }
 
     getTrendingSubreddits() {
-        return this.http.get(BASE_URL
-            .concat('/api/trending_subreddits')
-            .concat(API_EXTENSION));
+        const url = `${this.apiConstantes.baseUrl}/api/trending_subreddits${this.apiConstantes.apiExtension}`;
+        return this.http.get(url);
     }
 
     getSubredditUrl(subreddit: string) {
         return Observable.create(observer => {
-            const url = BASE_URL
-                .concat(SLASH_R_SLASH)
-                .concat(subreddit);
+            const url = `${this.apiConstantes.baseUrl}${this.apiConstantes.slashRSlash}${subreddit}`;
             observer.next(url);
           });
     }
