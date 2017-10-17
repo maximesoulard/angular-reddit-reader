@@ -1,0 +1,6 @@
+<div>
+  <h3 class="subtitle">Trending subreddits</h3>
+  <span *ngFor="let sub of trendingSubreddits" style="margin-left: 1.5em;">
+    <a href="" [routerLink]="['/r', sub]">{{ sub }}</a><br />
+  </span>
+</div>
