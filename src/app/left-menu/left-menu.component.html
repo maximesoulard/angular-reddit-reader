@@ -1,8 +1,18 @@
-<div>
-  <h1 class="title">
-    My very own reddit client
-  </h1>
-  <div class="is-multiline">
-      <ms-trending-subreddits></ms-trending-subreddits>
-  </div>
-</div>
+<aside class="menu">
+    <h1 class="title">
+      <a [routerLink]="'/'">YARedditClient</a>
+    </h1>
+    <p class="menu-label">
+      Trending subreddits
+    </p>
+    <ms-trending-subreddits></ms-trending-subreddits>
+    
+    <p class="menu-label">
+      Transactions
+    </p>
+    <ul class="menu-list">
+      <li><a>Payments</a></li>
+      <li><a>Transfers</a></li>
+      <li><a>Balance</a></li>
+    </ul>
+  </aside>
