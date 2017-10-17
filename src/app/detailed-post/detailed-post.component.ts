@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SubredditService } from '../api/subreddit.service';
 import { WindowService } from '../api/window.service';
+import { DomParserService } from '../api/domparser.service';
+import { PostService } from '../api/post.service';
 
 @Component({
   selector: 'ms-detailed-post',
@@ -10,9 +11,11 @@ import { WindowService } from '../api/window.service';
 export class DetailedPostComponent implements OnInit {
   @Input() post: any;
 
-  constructor(private subredditService: SubredditService, private windowService: WindowService) { }
+  constructor(private domParserService: DomParserService, private windowService: WindowService, private postService: PostService) { }
 
   ngOnInit() {
+    this.post.htmlcontent = this.domParserService.parse(this.post.data.selftext_html);
+    this.post.type = this.postService.getTypeOfPost(this.post);
   }
 
   goTo(url) {

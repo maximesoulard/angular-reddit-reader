@@ -20,6 +20,7 @@ import { PostComponent } from './post/post.component';
 import { DetailedPostComponent } from './detailed-post/detailed-post.component';
 import { LeftMenuComponent } from './left-menu/left-menu.component';
 import { TrendingSubredditsComponent } from './trending-subreddits/trending-subreddits.component';
+import { SubredditContentComponent } from './subreddit-content/subreddit-content.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TrendingSubredditsComponent } from './trending-subreddits/trending-subr
     PostComponent,
     DetailedPostComponent,
     LeftMenuComponent,
-    TrendingSubredditsComponent
+    TrendingSubredditsComponent,
+    SubredditContentComponent
   ],
   imports: [
     BrowserModule,

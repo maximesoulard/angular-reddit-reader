@@ -1,13 +1,15 @@
-<article class="media">
+<article class="media post">
     <figure class="media-left">
         <p class="image is-64x64">
-            <img [src]=post.data.thumbnail style="max-width: 100%; max-height: 100%;" (click)="onClickShowDetailedPost()">
+            <a>
+                <img [src]=post.data.thumbnail style="max-width: 100%; max-height: 100%;" (click)="goTo()">
+            </a>
         </p>
     </figure>
     <div class="media-content">
         <div class="content">
         <p>
-            <a [href]="post.data.url">{{ post.data.title }}</a>
+            <a (click)="goTo()">{{ post.data.title }}</a>
             <br>
             <strong>{{ post.data.subreddit_name_prefixed }}</strong><small style="margin-left: 1em;">Posted by {{ post.data.author }}</small>
         </p>
@@ -16,6 +18,9 @@
         <div class="level-left">
             <span><small><a>Comments</a></small></span>
             <span style="margin-left: 1em;"><small><a>Ups : {{ post.data.ups }}</a></small></span>
+            <span style="margin-left: 1em;">
+                <small><a [href]="post.data.url">Permalink</a></small>
+            </span>
         </div>
         </nav>
     </div>

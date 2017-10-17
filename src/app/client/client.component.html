@@ -3,8 +3,6 @@
         <ms-left-menu></ms-left-menu>
     </section>
     <section class="column" style="">
-        <div *ngFor="let post of posts" style="margin-bottom: 1em;">
-            <ms-post [post]=post></ms-post>
-        </div>
+        <router-outlet></router-outlet>
     </section>
 </div>

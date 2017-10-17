@@ -1,8 +1,9 @@
-<div>
+<aside class="menu">
   <h1 class="title">
-    My very own reddit client
+    <a [routerLink]="'/'">YARedditClient</a>
   </h1>
-  <div class="is-multiline">
-      <ms-trending-subreddits></ms-trending-subreddits>
-  </div>
-</div>
+  <p class="menu-label">
+    Trending subreddits
+  </p>
+  <ms-trending-subreddits></ms-trending-subreddits>
+</aside>

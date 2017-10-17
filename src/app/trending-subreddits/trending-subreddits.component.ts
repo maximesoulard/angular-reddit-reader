@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SubredditService } from '../api/subreddit.service';
 
 @Component({
@@ -18,5 +18,4 @@ export class TrendingSubredditsComponent implements OnInit {
         this.trendingSubreddits = response.subreddit_names;
       });
   }
-
 }
