@@ -7,8 +7,8 @@ export class PostService {
 
     constructor(private http: HttpClient, private apiConstantes: ApiConstantes) { }
 
-    getComments(subreddit: string, idPost: string, title: string) {
-        const completeUrl = `${this.apiConstantes.subredditBaseUrl}${subreddit}/comments/${idPost}/${title}${this.apiConstantes.apiExtension}`;
+    getComments(subreddit: string, idPost: string) {
+        const completeUrl = `${this.apiConstantes.subredditBaseUrl}${subreddit}/comments/${idPost}${this.apiConstantes.apiExtension}`;
         return this.http.get(completeUrl);
     }
 
