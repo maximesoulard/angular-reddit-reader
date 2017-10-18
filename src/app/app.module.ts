@@ -13,6 +13,7 @@ import { SubredditService } from './api/subreddit.service';
 import { WindowService } from './api/window.service';
 import { DomParserService } from './api/domparser.service';
 import { PostService } from './api/post.service';
+import { SearchService } from './api/search.service';
 
 import { AppComponent } from './app.component';
 import { ClientComponent } from './client/client.component';
@@ -22,6 +23,8 @@ import { LeftMenuComponent } from './left-menu/left-menu.component';
 import { TrendingSubredditsComponent } from './trending-subreddits/trending-subreddits.component';
 import { SubredditContentComponent } from './subreddit-content/subreddit-content.component';
 import { CommentComponent } from './comment/comment.component';
+import { SearchComponent } from './search/search.component';
+import { SearchContentComponent } from './search-content/search-content.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,9 @@ import { CommentComponent } from './comment/comment.component';
     LeftMenuComponent,
     TrendingSubredditsComponent,
     SubredditContentComponent,
-    CommentComponent
+    CommentComponent,
+    SearchComponent,
+    SearchContentComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,8 @@ import { CommentComponent } from './comment/comment.component';
     {provide: LocationStrategy, useClass: HashLocationStrategy},
     DomParserService,
     ApiConstantes,
-    PostService
+    PostService,
+    SearchService
   ],
   bootstrap: [AppComponent],
 })
