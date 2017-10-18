@@ -17,7 +17,10 @@ export class PostService {
     }
 
     isDisplayable(post: any) {
-        return post.data.post_hint === 'image' 
-            || post.data.url.indexOf(`${this.apiConstantes.baseUrl}${this.apiConstantes.slashRSlash}`) > -1;
+        const redditHostSlashRSlash = `${this.apiConstantes.baseUrl}${this.apiConstantes.slashRSlash}`;
+        const postHintIsImage = post.data.post_hint === 'image';
+        const urlHostIsReddit = post.data.url.indexOf(redditHostSlashRSlash) > -1;
+        const urlHostIsTheSameSubreddit = post.data.url.indexOf(`${redditHostSlashRSlash}${post.data.subreddit}`) > -1; // TODO handle comments link
+        return postHintIsImage || (urlHostIsReddit && urlHostIsTheSameSubreddit);
     }
 }
