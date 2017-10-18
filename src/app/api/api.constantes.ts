@@ -10,6 +10,7 @@ export class ApiConstantes {
     slashRSlash = "/r/";
     subredditBaseUrl = `${this.baseUrl}${this.slashRSlash}`;
     rAll = `${this.baseUrl}${this.slashRSlash}all/${this.modeHot}${this.apiExtension}`;
+    search = `${this.baseUrl}/subreddits/search${this.apiExtension}`;
 
     constructor() { }
 }
