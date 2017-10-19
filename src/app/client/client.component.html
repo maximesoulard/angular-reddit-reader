@@ -2,7 +2,7 @@
     <section class="column is-one-quarter">
         <ms-left-menu></ms-left-menu>
     </section>
-    <section class="column" style="">
-        <router-outlet></router-outlet>
+    <section class="column router-outlet-parent" [@routerAnimation]="getRouteAnimation(route)">
+        <router-outlet #route="outlet"></router-outlet>
     </section>
 </div>

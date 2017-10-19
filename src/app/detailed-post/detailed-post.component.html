@@ -1,21 +1,23 @@
-<article class="media" *ngIf="post.type === 'image'" >
-    <figure class="media-left">
-        <p class="image is-64x64">
-        </p>
-    </figure>
-    <div class="media-content detailed-content">
-        <a (click)=goTo(post.data.url) href="">
-            <img [src]=post.data.url style="max-width: 40%;">
-        </a>
-    </div>
-    <div class="media-right"></div>
-</article>
-
-<article class="media" *ngIf="post.type !== 'image'" >
-    <figure class="media-left">
-        <p class="image is-64x64">
-        </p>
-    </figure>
-    <div class="media-content detailed-content" [innerHTML]="post.htmlcontent"></div>
-    <div class="media-right"></div>
-</article>
+<section [@showPostAnimation]="state">
+    <article class="media" *ngIf="post.type === 'image'" >
+        <figure class="media-left">
+            <p class="image is-64x64">
+            </p>
+        </figure>
+        <div class="media-content detailed-content">
+            <a (click)=goTo(post.data.url) href="">
+                <img [src]=post.data.url style="max-width: 40%;">
+            </a>
+        </div>
+        <div class="media-right"></div>
+    </article>
+    
+    <article class="media" *ngIf="post.type !== 'image'" >
+        <figure class="media-left">
+            <p class="image is-64x64">
+            </p>
+        </figure>
+        <div class="media-content detailed-content" [innerHTML]="post.htmlcontent"></div>
+        <div class="media-right"></div>
+    </article>
+</section>

@@ -1,15 +1,17 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { PostService } from '../api/post.service';
 import { WindowService } from '../api/window.service';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'ms-post',
   templateUrl: 'post.component.html',
-  styleUrls: ['./post.component.css']
+  styleUrls: ['./post.component.css'],
 })
 export class PostComponent implements OnInit {
   @Input() post: any;
   showDetailedPost = false;
+  state = 'inactive';
 
   constructor(private postService: PostService, private windowService: WindowService) {}
 
@@ -19,6 +21,7 @@ export class PostComponent implements OnInit {
 
   onClickShowDetailedPost() {
     this.showDetailedPost = !this.showDetailedPost;
+    this.state = this.showDetailedPost ? 'active' : 'inactive';
   }
   
   goTo() {

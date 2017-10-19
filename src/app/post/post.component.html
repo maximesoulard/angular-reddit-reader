@@ -9,9 +9,9 @@
     <div class="media-content">
         <div class="content">
         <p>
-            <a (click)="goTo()">{{ post.data.title }}</a>
+            <a (click)="goTo()" style="color: #363636;">{{ post.data.title }}</a>
             <br>
-            <strong>{{ post.data.subreddit_name_prefixed }}</strong><small style="margin-left: 1em;">Posted by {{ post.data.author }}</small>
+            <strong><a style="color: #363636;" [routerLink]="['/r', post.data.subreddit]">{{ post.data.subreddit_name_prefixed }}</a></strong><small style="margin-left: 1em;">Posted by {{ post.data.author }}</small>
         </p>
         </div>
         <nav class="level is-mobile">
@@ -29,4 +29,4 @@
     </div>
 </article>
 
-<ms-detailed-post *ngIf=showDetailedPost [post]="post"></ms-detailed-post>
+<ms-detailed-post [hidden]="!showDetailedPost" [state]="state" [post]="post"></ms-detailed-post>

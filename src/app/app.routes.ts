@@ -5,9 +5,10 @@ import { CommentComponent } from './comment/comment.component';
 import { SearchContentComponent } from './search-content/search-content.component';
 
 export const ROUTES: Routes = [
-  { path: '', component: SubredditContentComponent },
-  { path: 'r/:subreddit', component: SubredditContentComponent },
-  { path: 'r/:subreddit/:mode', component: SubredditContentComponent },
-  { path: 'r/:subreddit/comments/:postId/:title', component: CommentComponent },
-  { path: 'search/:query', component:  SearchContentComponent}
+  { path: '', component: SubredditContentComponent},
+  { path: 'r/:subreddit', redirectTo: 'r/:subreddit/hot'},
+  { path: 'r/:subreddit/:mode', component: SubredditContentComponent, data: { animation: 'subreddit' } },
+  { path: 'r/:subreddit/comments/:postId/:title', component: CommentComponent, data: { animation: 'comment' } },
+  { path: 'search/:query', component:  SearchContentComponent, data: { animation: 'search' }}
+  // { path: '**', component: NotFound } TODO 404 Component
 ];
