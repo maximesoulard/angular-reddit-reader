@@ -1,5 +1,10 @@
 <div class="field">
   <div class="control">
-    <input class="input" type="text" placeholder="Find a subreddit">
+    <input class="input" placeholder="Find a subreddit" #searchBox id="search-box" (keyup)="search(searchBox.value)" />
   </div>
+  <ul class="menu-list search-results" *ngIf="results">
+    <li *ngFor="let sub of results" style="margin-left: 1.5em;">
+        <a href="" [routerLink]="['search/result/r', sub]" routerLinkActive="is-active" (click)="subredditClicked(sub)">{{ sub }}</a>
+    </li>
+  </ul>
 </div>
