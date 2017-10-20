@@ -4,7 +4,7 @@
   </p>
   <ul class="menu-list">
     <li *ngFor="let sub of trendingSubreddits" style="margin-left: 1.5em;">
-        <a href="" [routerLink]="['/r', sub]" routerLinkActive="is-active">{{ sub }}</a>
+        <a href="" [routerLink]="['/r', sub]" routerLinkActive="is-active">r/{{ sub }}</a>
     </li>
   </ul>
 </div>
