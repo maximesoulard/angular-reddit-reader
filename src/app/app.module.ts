@@ -4,6 +4,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HttpModule } from '@angular/http';
 
 import { ROUTES } from './app.routes';
 
@@ -24,7 +25,7 @@ import { TrendingSubredditsComponent } from './trending-subreddits/trending-subr
 import { SubredditContentComponent } from './subreddit-content/subreddit-content.component';
 import { CommentComponent } from './comment/comment.component';
 import { SearchComponent } from './search/search.component';
-import { SearchContentComponent } from './search-content/search-content.component';
+import { SearchHistoryComponent } from './search-history/search-history.component';
 
 @NgModule({
   declarations: [
@@ -37,12 +38,13 @@ import { SearchContentComponent } from './search-content/search-content.componen
     SubredditContentComponent,
     CommentComponent,
     SearchComponent,
-    SearchContentComponent
+    SearchHistoryComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [

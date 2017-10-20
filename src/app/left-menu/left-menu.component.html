@@ -5,9 +5,7 @@
   <p class="menu-label">
     Search
   </p>
-  <ms-search></ms-search>
-  <p class="menu-label">
-    Trending subreddits
-  </p>
+  <ms-search (onSubredditClicked)="onSubredditClicked($event)"></ms-search>
+  <ms-search-history [lastVisitedSubreddits]="lastVisitedSubreddits"></ms-search-history>
   <ms-trending-subreddits></ms-trending-subreddits>
 </aside>

@@ -6,8 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./left-menu.component.css']
 })
 export class LeftMenuComponent implements OnInit {
+  lastVisitedSubreddits: string[] = [];
 
   constructor() { }
 
   ngOnInit() {}
+
+  onSubredditClicked(subreddit: string) {
+    this.lastVisitedSubreddits.push(subreddit);
+  }
 }

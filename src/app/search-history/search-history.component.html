@@ -1,0 +1,10 @@
+<div>
+  <p class="menu-label">
+    History
+  </p>
+  <ul class="menu-list">
+    <li *ngFor="let sub of lastVisitedSubreddits" style="margin-left: 1.5em;">
+        <a href="" [routerLink]="['search/result/r', sub]" routerLinkActive="is-active">{{ sub }}</a>
+    </li>
+  </ul>
+</div>

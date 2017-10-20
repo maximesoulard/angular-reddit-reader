@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SearchContentComponent } from './search-content.component';
+import { LastVisitedComponent } from './last-visited.component';
 
-describe('SearchContentComponent', () => {
-  let component: SearchContentComponent;
-  let fixture: ComponentFixture<SearchContentComponent>;
+describe('LastVisitedComponent', () => {
+  let component: LastVisitedComponent;
+  let fixture: ComponentFixture<LastVisitedComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SearchContentComponent ]
+      declarations: [ LastVisitedComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SearchContentComponent);
+    fixture = TestBed.createComponent(LastVisitedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
