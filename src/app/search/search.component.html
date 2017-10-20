@@ -2,9 +2,12 @@
   <div class="control">
     <input class="input" placeholder="Find a subreddit" #searchBox id="search-box" (keyup)="search(searchBox.value)" />
   </div>
-  <ul class="menu-list search-results" *ngIf="results">
-    <li *ngFor="let sub of results" style="margin-left: 1.5em;">
-        <a href="" [routerLink]="['search/result/r', sub]" routerLinkActive="is-active" (click)="subredditClicked(sub)">{{ sub }}</a>
+  <ul class="menu-list search-results box notification is-link" [@showResultAnimation]="state" [hidden]="results.length === 0">
+    <button class="delete" (click)="closeSearchResult()"></button>
+    <li *ngFor="let sub of results">
+        <a href="" [routerLink]="['search/result/r', sub]" class="search-item" routerLinkActive="is-active" (click)="subredditClicked(sub)">
+          <strong>r/{{ sub }}</strong>
+        </a>
     </li>
   </ul>
 </div>
