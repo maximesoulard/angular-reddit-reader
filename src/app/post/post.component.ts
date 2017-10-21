@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { PostService } from '../api/post.service';
 import { WindowService } from '../api/window.service';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Post } from '../api/model/post';
 
 @Component({
   selector: 'ms-post',
@@ -9,7 +10,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   styleUrls: ['./post.component.css'],
 })
 export class PostComponent implements OnInit {
-  @Input() post: any;
+  @Input() post: Post;
   showDetailedPost = false;
   state = 'inactive';
 

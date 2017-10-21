@@ -1,7 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SubredditService } from '../api/subreddit.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Subreddit } from '../api/model/subreddit';
 import { trigger, state, animate, transition, style, query } from '@angular/animations';
+import { Post } from '../api/model/post';
 
 @Component({
   selector: 'ms-subreddit-content',
@@ -33,7 +35,7 @@ import { trigger, state, animate, transition, style, query } from '@angular/anim
       ])]
 })
 export class SubredditContentComponent implements OnInit {
-  posts: object[];
+  posts: Post[];
   subreddit: string;
   mode: string;
   
@@ -44,8 +46,8 @@ export class SubredditContentComponent implements OnInit {
       this.subreddit = params.get('subreddit');
       this.mode = params.get('mode');
       this.subredditService.get(this.subreddit, this.mode)
-        .subscribe(response => {
-          this.posts = response['data'].children;
+        .subscribe((r: Post[]) => {
+          this.posts = r;
         });
     });
   }

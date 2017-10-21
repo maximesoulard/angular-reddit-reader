@@ -11,11 +11,11 @@ export class TrendingSubredditsComponent implements OnInit {
   trendingSubreddits: string[];
 
   constructor(private subredditService: SubredditService) { }
-
+  
   ngOnInit() {
     this.subredditService.getTrendingSubreddits()
-      .subscribe((response: any) => {
-        this.trendingSubreddits = response.subreddit_names;
-      });
+    .subscribe((trendingSubreddits: string[]) => {
+      this.trendingSubreddits = trendingSubreddits;
+    });
   }
 }

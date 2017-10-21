@@ -1,12 +1,14 @@
 import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Http, Response } from '@angular/http';
 import { ApiConstantes } from './api.constantes';
+import { Subreddit } from './model/subreddit'
+import { Post } from './model/post';
 
 @Injectable()
 export class SubredditService {
 
-    constructor(private http: HttpClient, private apiConstantes: ApiConstantes) { }
+    constructor(private http: Http, private apiConstantes: ApiConstantes) { }
 
     get(subreddit: string, mode: string) {
         if (subreddit !== null) {
@@ -18,18 +20,21 @@ export class SubredditService {
         }
     }
 
-    getRAll() {
-        return this.http.get(this.apiConstantes.rAll);
+    getRAll(): Observable<Post[]> {
+        return this.http.get(this.apiConstantes.rAll)
+            .map((r: Response) => r.json().data.children as Post[]);
     }
 
-    getPosts(subreddit: string) {
+    getPosts(subreddit: string): Observable<Post[]> {
         const url = `${this.apiConstantes.baseUrl}${subreddit}${this.apiConstantes.apiExtension}`;
-        return this.http.get(url);
+        return this.http.get(url)
+            .map((r: Response) => r.json().data.children as Post[]);
     }
 
-    getTrendingSubreddits() {
+    getTrendingSubreddits(): Observable<string[]> {
         const url = `${this.apiConstantes.baseUrl}/api/trending_subreddits${this.apiConstantes.apiExtension}`;
-        return this.http.get(url);
+        return this.http.get(url)
+            .map((r: Response) => r.json().subreddit_names as string[]);
     }
 
     getSubredditUrl(subreddit: string) {
