@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { PostService } from '../api/post.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Comment } from '../api/model/comment';
+import { DomParserService } from '../api/domparser.service';
 
 @Component({
   selector: 'ms-comment',
@@ -8,17 +10,13 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
   styleUrls: ['./comment.component.css']
 })
 export class CommentComponent implements OnInit {
-  comments: any[];
+  @Input() comment: Comment;
 
-  constructor(private postService: PostService, private route: ActivatedRoute) { }
+  constructor(private domParserService: DomParserService) { }
 
   ngOnInit() {
-    this.route.paramMap.subscribe((params: ParamMap) => {
-      this.postService.getComments(params.get('subreddit'), params.get('postId'))
-        .subscribe((response: any[]) => {
-          this.comments = response;
-        });
-    });
+    if (this.comment.data && this.comment.data.body_html)
+      this.comment.data.body_html = this.domParserService.parse(this.comment.data.body_html);
   }
 
 }

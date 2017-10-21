@@ -26,6 +26,7 @@ import { SubredditContentComponent } from './subreddit-content/subreddit-content
 import { CommentComponent } from './comment/comment.component';
 import { SearchComponent } from './search/search.component';
 import { SearchHistoryComponent } from './search-history/search-history.component';
+import { CommentsComponent } from './comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { SearchHistoryComponent } from './search-history/search-history.componen
     SubredditContentComponent,
     CommentComponent,
     SearchComponent,
-    SearchHistoryComponent
+    SearchHistoryComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,

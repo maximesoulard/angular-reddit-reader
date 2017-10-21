@@ -62,7 +62,6 @@ export class SearchComponent implements OnInit {
   }
 
   search(term) {
-    // this.searchService.searchForASubreddit(this.queryString, null);
     this.searchTerms.next(term);
   }
   

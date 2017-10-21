@@ -14,8 +14,8 @@ export class TrendingSubredditsComponent implements OnInit {
   
   ngOnInit() {
     this.subredditService.getTrendingSubreddits()
-    .subscribe((trendingSubreddits: string[]) => {
-      this.trendingSubreddits = trendingSubreddits;
-    });
+      .subscribe((trendingSubreddits: string[]) => {
+        this.trendingSubreddits = trendingSubreddits;
+      });
   }
 }
