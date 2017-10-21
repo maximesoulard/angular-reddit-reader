@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import _ from "lodash";
 
 @Component({
   selector: 'ms-left-menu',
@@ -6,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./left-menu.component.css']
 })
 export class LeftMenuComponent implements OnInit {
-  lastVisitedSubreddits: string[] = [];
+  lastVisitedSubreddits = new Set();
 
   constructor() { }
 
   ngOnInit() {}
 
   onSubredditClicked(subreddit: string) {
-    this.lastVisitedSubreddits.push(subreddit);
+    this.lastVisitedSubreddits.add(subreddit);
   }
 }
