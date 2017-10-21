@@ -12,7 +12,7 @@
     <nav class="level is-mobile">
         <div class="level-left">
             <span>
-                <small>{{ comment.data.created * 1000 | date }} {{ comment.data.created * 1000 | date:'shortTime' }}</small>
+                <small>{{ comment.data.created_utc * 1000 | date }} {{ comment.data.created_utc * 1000 | date:'shortTime' }}</small>
             </span>
             <!-- <span style="margin-left: 1em;"><small><a>Ups : {{ post.data.ups }}</a></small></span> -->
             <span style="margin-left: 1em;">
@@ -26,8 +26,8 @@
     </div>
 </article>
 
-<section style="margin-left: 4em;"> 
-    <div *ngFor="let child of comment.data.children">
+<section style="margin-left: 4em;" *ngIf="replies"> 
+    <div *ngFor="let child of replies.data.children">
         <ms-comment [comment]="child"></ms-comment>
     </div>
 </section>

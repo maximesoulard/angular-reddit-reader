@@ -10,8 +10,8 @@ interface CommentData extends Data {
     body: string,
     stickied: boolean,
     parent_id: string,
-    created: string,
-    subreddit_name_prefixed: string
+    subreddit_name_prefixed: string,
+    replies: Comment
 }
 
 interface CommentChild {
