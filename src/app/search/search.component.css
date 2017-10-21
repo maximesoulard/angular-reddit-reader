@@ -25,3 +25,7 @@
     background-color: white !important;
     color: black !important;
 }
+
+.search-results-hidden {
+    z-index: -1;
+}
