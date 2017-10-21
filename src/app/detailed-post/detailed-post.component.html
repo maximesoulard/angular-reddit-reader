@@ -1,5 +1,5 @@
 <section [@showPostAnimation]="state">
-    <article class="media" *ngIf="post.type === 'image'" >
+    <article class="media" *ngIf="post.data.type === 'image'" >
         <figure class="media-left">
             <p class="image is-64x64">
             </p>
@@ -12,12 +12,12 @@
         <div class="media-right"></div>
     </article>
     
-    <article class="media" *ngIf="post.type !== 'image'" >
+    <article class="media" *ngIf="post.data.type !== 'image'" >
         <figure class="media-left">
             <p class="image is-64x64">
             </p>
         </figure>
-        <div class="media-content detailed-content" [innerHTML]="post.htmlcontent"></div>
+        <div class="media-content detailed-content" [innerHTML]="post.data.selftext_html"></div>
         <div class="media-right"></div>
     </article>
 </section>

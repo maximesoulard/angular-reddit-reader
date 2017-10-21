@@ -17,7 +17,7 @@
         <nav class="level is-mobile">
         <div class="level-left">
             <span><small><a [routerLink]="['/r', post.data.subreddit, 'comments', post.data.id]">Comments</a></small></span>
-            <span style="margin-left: 1em;"><small><a>Ups : {{ post.data.ups }}</a></small></span>
+            <span style="margin-left: 1em;"><small><a><i class="fa fa-arrow-up prs"></i></a>{{ post.data.ups }}</small></span>
             <span style="margin-left: 1em;">
                 <small><a [href]="post.data.url">Permalink</a></small>
             </span>

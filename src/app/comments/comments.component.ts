@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { PostService } from '../api/post.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Comment } from '../api/model/comment';
-import * as moment from 'moment';
 import { trigger, state, animate, transition, style, query } from '@angular/animations';
 import { Post } from '../api/model/post';
 
@@ -53,7 +52,6 @@ export class CommentsComponent implements OnInit {
           .slice(1);
         this.post = new Post();
         this.post.data = r[0].data.children[0].data; // The post is always 1st element of comments array
-        console.log(this.post.data);
       });
       
     });

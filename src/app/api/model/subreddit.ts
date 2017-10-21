@@ -12,5 +12,6 @@ export interface Child {
 
 export interface ChildData {
     id: string,
-    title: string
+    title: string,
+    display_name: string
 }

@@ -3,6 +3,7 @@ import { WindowService } from '../api/window.service';
 import { DomParserService } from '../api/domparser.service';
 import { PostService } from '../api/post.service';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Post } from '../api/model/post';
 
 @Component({
   selector: 'ms-detailed-post',
@@ -24,14 +25,14 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   ]
 })
 export class DetailedPostComponent implements OnInit {
-  @Input() post: any;
+  @Input() post: Post;
   @Input() state: string;
 
   constructor(private domParserService: DomParserService, private windowService: WindowService, private postService: PostService) { }
 
   ngOnInit() {
-    this.post.htmlcontent = this.domParserService.parse(this.post.data.selftext_html);
-    this.post.type = this.postService.getTypeOfPost(this.post);
+    this.post.data.selftext_html = this.domParserService.parse(this.post.data.selftext_html);
+    this.post.data.type = this.postService.getTypeOfPost(this.post);
   }
 
   goTo(url) {

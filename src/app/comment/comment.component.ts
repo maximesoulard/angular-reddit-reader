@@ -18,5 +18,4 @@ export class CommentComponent implements OnInit {
     if (this.comment.data && this.comment.data.body_html)
       this.comment.data.body_html = this.domParserService.parse(this.comment.data.body_html);
   }
-
 }

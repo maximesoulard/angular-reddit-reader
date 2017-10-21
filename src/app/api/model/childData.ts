@@ -14,7 +14,9 @@ export interface Data {
     subreddit_id: string,
     post_hint: string,
     subreddit_name_prefixed: string,
-    subreddit: string
+    subreddit: string,
+    ups: number,
+    type: string
 }
 
 interface Preview {

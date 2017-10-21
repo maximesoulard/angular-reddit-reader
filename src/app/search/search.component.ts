@@ -32,7 +32,7 @@ import 'rxjs/add/operator/do';
 })
 export class SearchComponent implements OnInit {
   subreddits: Observable<string[]>;
-  results: any[] = [];
+  results: string[] = [];
   private searchTerms = new Subject<string>();
   queryString: string;
   @Output() onSubredditClicked = new EventEmitter<string>();
