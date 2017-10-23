@@ -30,11 +30,12 @@ export class DetailedPostComponent implements OnInit {
   @Input() state: string;
   isModalActive: boolean;
   contentToDisplay: SafeHtml;
+  isComponentActive: boolean;
 
   constructor(private domParserService: DomParserService, private windowService: WindowService, private postService: PostService, private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
-    const contentToDisplay = this.postService.getContentToDisplay(this.post);
+    this.contentToDisplay = this.postService.getContentToDisplay(this.post);
     this.post.data.type = this.postService.getTypeOfPost(this.post);
   }
 
