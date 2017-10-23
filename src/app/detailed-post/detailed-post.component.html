@@ -18,8 +18,7 @@
             <p class="image is-64x64">
             </p>
         </figure>
-        <div class="media-content detailed-content" *ngIf="post.data.selftext_html != null" [innerHTML]="post.data.selftextSafeHtml"></div>
-        <div class="media-content detailed-content" *ngIf="post.data.secure_media_embed" [innerHTML]="post.data.secure_media_embed.contentSafeHtml"></div>
+        <div class="media-content detailed-content" *ngIf="contentToDisplay != null" [innerHTML]="contentToDisplay"></div>
         <div class="media-right"></div>
     </article>
 </section>

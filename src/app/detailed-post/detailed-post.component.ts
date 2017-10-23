@@ -4,7 +4,7 @@ import { DomParserService } from '../api/domparser.service';
 import { PostService } from '../api/post.service';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { Post } from '../api/model/post';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'ms-detailed-post',
@@ -29,13 +29,12 @@ export class DetailedPostComponent implements OnInit {
   @Input() post: Post;
   @Input() state: string;
   isModalActive: boolean;
+  contentToDisplay: SafeHtml;
 
   constructor(private domParserService: DomParserService, private windowService: WindowService, private postService: PostService, private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
-    this.post.data.selftextSafeHtml = this.domParserService.parse(this.post.data.selftext_html);
-    if (this.post.data.secure_media_embed)
-      this.post.data.secure_media_embed.contentSafeHtml = this.domParserService.parse(this.post.data.secure_media_embed.content);
+    const contentToDisplay = this.postService.getContentToDisplay(this.post);
     this.post.data.type = this.postService.getTypeOfPost(this.post);
   }
 
