@@ -1,4 +1,5 @@
 import { Data } from "./childData";
+import { SafeHtml } from "@angular/platform-browser";
 
 export interface Comment {
     data: CommentData
@@ -12,7 +13,8 @@ interface CommentData extends Data {
     parent_id: string,
     subreddit_name_prefixed: string,
     replies: Comment,
-    depth: number
+    depth: number,
+    bodySafeHtml: SafeHtml
 }
 
 interface CommentChild {

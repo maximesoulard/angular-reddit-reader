@@ -27,6 +27,8 @@ import { CommentComponent } from './comment/comment.component';
 import { SearchComponent } from './search/search.component';
 import { SearchHistoryComponent } from './search-history/search-history.component';
 import { CommentsComponent } from './comments/comments.component';
+import { SubscriptionsComponent } from './subscriptions/subscriptions.component';
+import { ImageModalComponent } from './image-modal/image-modal.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { CommentsComponent } from './comments/comments.component';
     CommentComponent,
     SearchComponent,
     SearchHistoryComponent,
-    CommentsComponent
+    CommentsComponent,
+    SubscriptionsComponent,
+    ImageModalComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,5 @@
+import { SafeHtml } from "@angular/platform-browser";
+
 export interface Data {
     id: string,
     title: string,
@@ -8,6 +10,7 @@ export interface Data {
     author: string,
     created_utc: number,
     selftext_html?: string,
+    selftextSafeHtml?: SafeHtml,
     domain: string,
     preview?: Preview,
     thumbnail: string,
@@ -16,7 +19,8 @@ export interface Data {
     subreddit_name_prefixed: string,
     subreddit: string,
     ups: number,
-    type: string
+    type: string,
+    secure_media_embed: SecureMedia
 }
 
 interface Preview {
@@ -30,4 +34,14 @@ interface Image {
 
 interface ImageSource {
     url: string
+}
+
+interface SecureMedia {
+    oembed: Embedded,
+    content: string,
+    contentSafeHtml: SafeHtml
+}
+
+interface Embedded {
+    html: string
 }

@@ -5,9 +5,10 @@
             </p>
         </figure>
         <div class="media-content detailed-content">
-            <a (click)=goTo(post.data.url) href="">
+            <a (click)=toggleModal()>
                 <img [src]=post.data.url style="max-width: 40%;">
             </a>
+            <ms-image-modal (onImageModalClosed)=onImageModalClosed() [isActive]=isModalActive [url]=post.data.url></ms-image-modal>
         </div>
         <div class="media-right"></div>
     </article>
@@ -17,7 +18,8 @@
             <p class="image is-64x64">
             </p>
         </figure>
-        <div class="media-content detailed-content" [innerHTML]="post.data.selftext_html"></div>
+        <div class="media-content detailed-content" *ngIf="post.data.selftext_html != null" [innerHTML]="post.data.selftextSafeHtml"></div>
+        <div class="media-content detailed-content" *ngIf="post.data.secure_media_embed" [innerHTML]="post.data.secure_media_embed.contentSafeHtml"></div>
         <div class="media-right"></div>
     </article>
 </section>

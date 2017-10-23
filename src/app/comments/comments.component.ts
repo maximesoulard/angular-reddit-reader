@@ -3,6 +3,7 @@ import { PostService } from '../api/post.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Comment } from '../api/model/comment';
 import { trigger, state, animate, transition, style, query } from '@angular/animations';
+import { Location } from '@angular/common';
 import { Post } from '../api/model/post';
 
 @Component({
@@ -40,7 +41,7 @@ export class CommentsComponent implements OnInit {
   comments: Comment[];
   post: Post;
 
-  constructor(private postService: PostService, private route: ActivatedRoute) { }
+  constructor(private postService: PostService, private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
@@ -55,6 +56,10 @@ export class CommentsComponent implements OnInit {
       });
       
     });
+  }
+
+  goBack() {
+    this.location.back();
   }
 
 }

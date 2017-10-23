@@ -16,9 +16,8 @@ export class CommentComponent implements OnInit {
   constructor(private domParserService: DomParserService) { }
 
   ngOnInit() {
-    console.log(this.comment.data)
     if (this.comment.data && this.comment.data.body_html)
-      this.comment.data.body_html = this.domParserService.parse(this.comment.data.body_html);
+      this.comment.data.bodySafeHtml = this.domParserService.parse(this.comment.data.body_html);
     if (this.comment.data.replies) {
       this.replies = this.comment.data.replies;
     }

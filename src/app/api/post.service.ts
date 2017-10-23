@@ -24,8 +24,7 @@ export class PostService {
     isDisplayable(post: Post) {
         const redditHostSlashRSlash = `${this.apiConstantes.baseUrl}${this.apiConstantes.slashRSlash}`;
         const postHintIsImage = post.data.post_hint === 'image';
-        const urlHostIsReddit = post.data.url.indexOf(redditHostSlashRSlash) > -1 && post.data.selftext_html;
-        const urlHostIsTheSameSubreddit = post.data.url.indexOf(`${redditHostSlashRSlash}${post.data.subreddit}`) > -1; // TODO handle comments link
-        return postHintIsImage || (urlHostIsReddit && urlHostIsTheSameSubreddit);
+        // const urlHostIsTheSameSubreddit = post.data.url.indexOf(`${redditHostSlashRSlash}${post.data.subreddit}`) > -1;
+        return postHintIsImage || post.data.selftext_html != null || post.data.secure_media_embed.content != null;
     }
 }
