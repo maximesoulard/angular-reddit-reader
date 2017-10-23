@@ -11,9 +11,11 @@ interface CommentData extends Data {
     stickied: boolean,
     parent_id: string,
     subreddit_name_prefixed: string,
-    replies: Comment
+    replies: Comment,
+    depth: number
 }
 
 interface CommentChild {
-    data: CommentData
+    data: CommentData,
+    kind: string
 }

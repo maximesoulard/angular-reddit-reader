@@ -1,4 +1,4 @@
-<article class="media" style="padding-top: 1em; padding-bottom: 1em; border-top: 1px solid #e4e6e8;">
+<article class="media comment">
     <figure class="media-left">
     </figure>
     <div class="media-content">
@@ -10,11 +10,14 @@
         </p>
     </div>
     <nav class="level is-mobile">
-        <div class="level-left">
+        <div class="level-left is-size-7">
             <span>
                 <small>{{ comment.data.created_utc * 1000 | date }} {{ comment.data.created_utc * 1000 | date:'shortTime' }}</small>
             </span>
-            <!-- <span style="margin-left: 1em;"><small><a>Ups : {{ post.data.ups }}</a></small></span> -->
+            <span>
+                <small style="padding-left: 1em;">Posted by <b>{{ comment.data.author }}</b></small>
+            </span>
+            <span style="margin-left: 1em;"><small><a><i class="fa fa-arrow-up prs"></i></a>{{ comment.data.ups }}</small></span>
             <span style="margin-left: 1em;">
                 <!-- <small><a [href]="post.data.url">Permalink</a></small> -->
             </span>
@@ -28,6 +31,8 @@
 
 <section style="margin-left: 4em;" *ngIf="replies"> 
     <div *ngFor="let child of replies.data.children">
-        <ms-comment [comment]="child"></ms-comment>
+        <div style="border-left: 5px dotted #e4e6e8;" [class.is-depth-odd]="child.data.depth % 2 === 1" [class.is-depth-pair]="child.data.depth % 2 === 0">
+            <ms-comment *ngIf="child.kind !== 'more'" [comment]="child"></ms-comment>
+        </div>
     </div>
 </section>
