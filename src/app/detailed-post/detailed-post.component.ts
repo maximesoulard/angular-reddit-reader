@@ -5,6 +5,7 @@ import { PostService } from '../api/post.service';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { Post } from '../api/model/post';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { EmbedService } from '../api/embed.service';
 
 @Component({
   selector: 'ms-detailed-post',
@@ -31,11 +32,17 @@ export class DetailedPostComponent implements OnInit {
   isModalActive: boolean;
   contentToDisplay: SafeHtml;
   isComponentActive: boolean;
+  gifUrl: string;
 
-  constructor(private domParserService: DomParserService, private windowService: WindowService, private postService: PostService, private sanitizer: DomSanitizer) { }
+  constructor(private domParserService: DomParserService, 
+    private windowService: WindowService, 
+    private postService: PostService, 
+    private embedService: EmbedService) { }
 
   ngOnInit() {
-    this.contentToDisplay = this.postService.getContentToDisplay(this.post);
+    const content: SafeHtml | string =  this.embedService.getSafeInnerHtml(this.post);
+    this.contentToDisplay = typeof content !== 'string' ? content : null;
+    this.gifUrl = typeof content === 'string' ? content : null;
     this.post.data.type = this.postService.getTypeOfPost(this.post);
   }
 

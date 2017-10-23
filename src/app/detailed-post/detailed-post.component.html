@@ -20,5 +20,6 @@
         </figure>
         <div class="media-content detailed-content" *ngIf="contentToDisplay != null && state === 'active'" [innerHTML]="contentToDisplay"></div>
         <div class="media-right"></div>
+        <img *ngIf="gifUrl" [src]=gifUrl>
     </article>
 </section>

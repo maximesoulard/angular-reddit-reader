@@ -20,7 +20,7 @@ export interface Data {
     subreddit: string,
     ups: number,
     type: string,
-    secure_media_embed: SecureMedia
+    secure_media_embed?: SecureMedia
 }
 
 interface Preview {
@@ -29,11 +29,20 @@ interface Preview {
 
 interface Image {
     source: ImageSource,
+    variants: ImageVariants,
     id: string
 }
 
 interface ImageSource {
     url: string
+}
+
+interface ImageVariants {
+    gif: Gif
+}
+
+interface Gif {
+    source: ImageSource
 }
 
 interface SecureMedia {

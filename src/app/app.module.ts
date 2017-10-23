@@ -15,6 +15,7 @@ import { WindowService } from './api/window.service';
 import { DomParserService } from './api/domparser.service';
 import { PostService } from './api/post.service';
 import { SearchService } from './api/search.service';
+import { EmbedService } from './api/embed.service';
 
 import { AppComponent } from './app.component';
 import { ClientComponent } from './client/client.component';
@@ -27,7 +28,6 @@ import { CommentComponent } from './comment/comment.component';
 import { SearchComponent } from './search/search.component';
 import { SearchHistoryComponent } from './search-history/search-history.component';
 import { CommentsComponent } from './comments/comments.component';
-import { SubscriptionsComponent } from './subscriptions/subscriptions.component';
 import { ImageModalComponent } from './image-modal/image-modal.component';
 
 @NgModule({
@@ -43,7 +43,6 @@ import { ImageModalComponent } from './image-modal/image-modal.component';
     SearchComponent,
     SearchHistoryComponent,
     CommentsComponent,
-    SubscriptionsComponent,
     ImageModalComponent
   ],
   imports: [
@@ -60,7 +59,8 @@ import { ImageModalComponent } from './image-modal/image-modal.component';
     DomParserService,
     ApiConstantes,
     PostService,
-    SearchService
+    SearchService,
+    EmbedService
   ],
   bootstrap: [AppComponent],
 })

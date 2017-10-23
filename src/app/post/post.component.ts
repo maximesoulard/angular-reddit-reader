@@ -3,6 +3,8 @@ import { PostService } from '../api/post.service';
 import { WindowService } from '../api/window.service';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { Post } from '../api/model/post';
+import { EmbedService } from '../api/embed.service';
+import { EmbeddedFactory } from '../api/model/embedded';
 
 @Component({
   selector: 'ms-post',
@@ -14,10 +16,12 @@ export class PostComponent implements OnInit {
   showDetailedPost = false;
   state = 'inactive';
 
-  constructor(private postService: PostService, private windowService: WindowService) {}
+  constructor(private windowService: WindowService, 
+    private embedService: EmbedService) {}
 
   ngOnInit() {
-    this.post.isDisplayable = this.postService.isDisplayable(this.post);
+    if (EmbeddedFactory.getInstance(this.post) != null)
+      this.post.isDisplayable = true;
   }
 
   onClickShowDetailedPost() {

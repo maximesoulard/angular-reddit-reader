@@ -22,22 +22,4 @@ export class PostService {
     getTypeOfPost(post: Post) {
         return post.data.post_hint;
     }
-
-    isDisplayable(post: Post) {
-        const redditHostSlashRSlash = `${this.apiConstantes.baseUrl}${this.apiConstantes.slashRSlash}`;
-        const postHintIsImage = post.data.post_hint === 'image';
-        // const urlHostIsTheSameSubreddit = post.data.url.indexOf(`${redditHostSlashRSlash}${post.data.subreddit}`) > -1;
-        return postHintIsImage || post.data.selftext_html != null || post.data.secure_media_embed.content != null;
-    }
-
-    getContentToDisplay(post: Post): SafeHtml|string {
-        let stuffToDisplay: SafeHtml | string;
-        if (this.isDisplayable(post)) {
-            if (post.data.secure_media_embed != null && post.data.secure_media_embed.content != null)
-                stuffToDisplay = this.domParser.parse(post.data.secure_media_embed.content);
-            else if (post.data.selftext_html != null)
-                stuffToDisplay = this.domParser.parse(post.data.selftext_html);
-        }
-        return stuffToDisplay;
-    }
 }
