@@ -23,7 +23,10 @@ class ImgurEmbedded extends Embedded {
     }
     getDirectLink(): string {
         // TODO return post.data.url if it is a *.mp4 or *.gif or *.gifv
-        return this.post.data.preview.images[0].variants.gif.source.url;
+        // FIXME
+        return this.post.data.preview.images[0].variants.gif 
+            ? this.post.data.preview.images[0].variants.gif.source.url 
+            : null;
     }
 }
 
@@ -33,7 +36,10 @@ class GfycatEmbedded extends Embedded {
     }
     getDirectLink(): string {
         // TODO return post.data.url if it is a *.mp4 or *.gif or *.gifv
-        return this.post.data.preview.images[0].variants.gif.source.url;
+        // FIXME
+        return this.post.data.preview.images[0].variants.gif 
+            ? this.post.data.preview.images[0].variants.gif.source.url 
+            : null;
     }
 }
 
