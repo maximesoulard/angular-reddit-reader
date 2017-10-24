@@ -38,9 +38,7 @@ export class SubredditService {
     getTrendingSubreddits(): Observable<string[]> {
         const url = `${this.apiConstantes.baseUrl}/api/trending_subreddits${this.apiConstantes.apiExtension}`;
         return this.http.get<TrendingSubreddits>(url)
-            .map((ts: TrendingSubreddits) => {
-                return ts.subreddit_names;
-            });
+            .map(ts => ts.subreddit_names );
     }
 
     getSubredditUrl(subreddit: string): Observable<string> {
