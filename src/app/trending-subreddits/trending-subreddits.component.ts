@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SubredditService } from '../api/subreddit.service';
 import { TrendingSubreddits } from '../api/model/trendingSubreddits';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'ms-trending-subreddits',
@@ -9,14 +10,12 @@ import { TrendingSubreddits } from '../api/model/trendingSubreddits';
 })
 export class TrendingSubredditsComponent implements OnInit {
 
-  trendingSubreddits: string[];
+  trendingSubreddits: Observable<string[]>;
 
   constructor(private subredditService: SubredditService) { }
   
   ngOnInit() {
-    this.subredditService.getTrendingSubreddits()
-      .subscribe((trendingSubreddits: TrendingSubreddits) => {
-        this.trendingSubreddits = trendingSubreddits.subreddit_names;
-      });
+    // subreddit_names
+    this.trendingSubreddits = this.subredditService.getTrendingSubreddits();
   }
 }

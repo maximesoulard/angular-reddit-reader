@@ -4,6 +4,7 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Subreddit } from '../api/model/subreddit';
 import { trigger, state, animate, transition, style, query } from '@angular/animations';
 import { Post } from '../api/model/post';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'ms-subreddit-content',
@@ -35,7 +36,7 @@ import { Post } from '../api/model/post';
       ])]
 })
 export class SubredditContentComponent implements OnInit {
-  posts: Post[];
+  posts: Observable<Post[]>;
   subreddit: string;
   mode: string;
   
@@ -45,10 +46,7 @@ export class SubredditContentComponent implements OnInit {
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.subreddit = params.get('subreddit');
       this.mode = params.get('mode');
-      this.subredditService.get(this.subreddit, this.mode)
-        .subscribe((r: Post[]) => {
-          this.posts = r;
-        });
+      this.posts = this.subredditService.get(this.subreddit, this.mode);
     });
   }
 }

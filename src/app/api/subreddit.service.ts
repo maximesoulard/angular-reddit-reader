@@ -35,9 +35,12 @@ export class SubredditService {
             .map((r: SubredditContentResponse) => r.data.children as Post[]);
     }
 
-    getTrendingSubreddits(): Observable<TrendingSubreddits> {
+    getTrendingSubreddits(): Observable<string[]> {
         const url = `${this.apiConstantes.baseUrl}/api/trending_subreddits${this.apiConstantes.apiExtension}`;
-        return this.http.get<TrendingSubreddits>(url);
+        return this.http.get<TrendingSubreddits>(url)
+            .map((ts: TrendingSubreddits) => {
+                return ts.subreddit_names;
+            });
     }
 
     getSubredditUrl(subreddit: string): Observable<string> {
