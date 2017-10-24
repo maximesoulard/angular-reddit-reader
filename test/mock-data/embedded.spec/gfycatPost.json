@@ -1,0 +1,197 @@
+{
+    "kind": "t3",
+    "data": {
+        "domain": "gfycat.com",
+        "approved_at_utc": null,
+        "banned_by": null,
+        "media_embed": {
+            "content": "&lt;iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fgfycat.com%2Fifr%2FQuickWaterloggedAmurminnow&amp;url=https%3A%2F%2Fgfycat.com%2Fgifs%2Fdetail%2FQuickWaterloggedAmurminnow&amp;image=https%3A%2F%2Fthumbs.gfycat.com%2FQuickWaterloggedAmurminnow-size_restricted.gif&amp;key=522baf40bd3911e08d854040d3dc5c07&amp;type=text%2Fhtml&amp;schema=gfycat\" width=\"600\" height=\"338\" scrolling=\"no\" frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;",
+            "width": 600,
+            "scrolling": false,
+            "height": 338
+        },
+        "thumbnail_width": 140,
+        "subreddit": "HighQualityGifs",
+        "selftext_html": null,
+        "selftext": "",
+        "likes": null,
+        "suggested_sort": null,
+        "user_reports": [],
+        "secure_media": {
+            "oembed": {
+                "provider_url": "http://gfycat.com",
+                "description": "Watch Friendly wild birdie GIF by rskingen on Gfycat. Discover more GIFS online on Gfycat",
+                "title": "Friendly wild birdie - Create, Discover and Share Awesome GIFs on Gfycat",
+                "type": "video",
+                "thumbnail_width": 445,
+                "height": 338,
+                "width": 600,
+                "html": "&lt;iframe class=\"embedly-embed\" src=\"https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fgfycat.com%2Fifr%2FQuickWaterloggedAmurminnow&amp;url=https%3A%2F%2Fgfycat.com%2Fgifs%2Fdetail%2FQuickWaterloggedAmurminnow&amp;image=https%3A%2F%2Fthumbs.gfycat.com%2FQuickWaterloggedAmurminnow-size_restricted.gif&amp;key=2aa3c4d5f3de4f5b9120b660ad850dc9&amp;type=text%2Fhtml&amp;schema=gfycat\" width=\"600\" height=\"338\" scrolling=\"no\" frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;",
+                "version": "1.0",
+                "provider_name": "gfycat",
+                "thumbnail_url": "https://i.embed.ly/1/image?url=https%3A%2F%2Fthumbs.gfycat.com%2FQuickWaterloggedAmurminnow-size_restricted.gif&amp;key=b1e305db91cf4aa5a86b732cc9fffceb",
+                "thumbnail_height": 250
+            },
+            "type": "gfycat.com"
+        },
+        "is_reddit_media_domain": false,
+        "link_flair_text": "/r/all",
+        "id": "787hzi",
+        "banned_at_utc": null,
+        "view_count": null,
+        "archived": false,
+        "clicked": false,
+        "report_reasons": null,
+        "title": "Petting a bird in my backyard",
+        "num_crossposts": 0,
+        "saved": false,
+        "mod_reports": [],
+        "can_mod_post": false,
+        "is_crosspostable": false,
+        "pinned": false,
+        "score": 24794,
+        "approved_by": null,
+        "over_18": false,
+        "hidden": false,
+        "preview": {
+            "images": [
+                {
+                    "source": {
+                        "url": "https://i.redditmedia.com/_NJhQv5xWZA9utEDSOXwxStiI8GiSZ0bJo95CKELLPU.gif?fm=jpg&amp;s=f6d81560f41a7b7c9a1f32cd59f4cd35",
+                        "width": 445,
+                        "height": 250
+                    },
+                    "resolutions": [
+                        {
+                            "url": "https://i.redditmedia.com/_NJhQv5xWZA9utEDSOXwxStiI8GiSZ0bJo95CKELLPU.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;fm=jpg&amp;s=f8125efb8fdf0141345ce165f68b1ddc",
+                            "width": 108,
+                            "height": 60
+                        },
+                        {
+                            "url": "https://i.redditmedia.com/_NJhQv5xWZA9utEDSOXwxStiI8GiSZ0bJo95CKELLPU.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;fm=jpg&amp;s=42e059e5f3b82dbc98c8d809d3655d24",
+                            "width": 216,
+                            "height": 121
+                        },
+                        {
+                            "url": "https://i.redditmedia.com/_NJhQv5xWZA9utEDSOXwxStiI8GiSZ0bJo95CKELLPU.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;fm=jpg&amp;s=a890add0e95a16a6103d9cf190ac2e2b",
+                            "width": 320,
+                            "height": 179
+                        }
+                    ],
+                    "variants": {
+                        "gif": {
+                            "source": {
+                                "url": "https://g.redditmedia.com/_NJhQv5xWZA9utEDSOXwxStiI8GiSZ0bJo95CKELLPU.gif?s=4b21b7a9e242d8d3be3ae4417f3c4d28",
+                                "width": 445,
+                                "height": 250
+                            },
+                            "resolutions": [
+                                {
+                                    "url": "https://g.redditmedia.com/_NJhQv5xWZA9utEDSOXwxStiI8GiSZ0bJo95CKELLPU.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=8c0436d94fe1a666cdaf30f4d1201c8a",
+                                    "width": 108,
+                                    "height": 60
+                                },
+                                {
+                                    "url": "https://g.redditmedia.com/_NJhQv5xWZA9utEDSOXwxStiI8GiSZ0bJo95CKELLPU.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=961006c1c53210f1ac2f6a6c060c854d",
+                                    "width": 216,
+                                    "height": 121
+                                },
+                                {
+                                    "url": "https://g.redditmedia.com/_NJhQv5xWZA9utEDSOXwxStiI8GiSZ0bJo95CKELLPU.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=3c9135c4e41543c2b6c84e3bc89e675d",
+                                    "width": 320,
+                                    "height": 179
+                                }
+                            ]
+                        },
+                        "mp4": {
+                            "source": {
+                                "url": "https://g.redditmedia.com/_NJhQv5xWZA9utEDSOXwxStiI8GiSZ0bJo95CKELLPU.gif?fm=mp4&amp;mp4-fragmented=false&amp;s=e2a77806352e64c869c24da45638d2c2",
+                                "width": 445,
+                                "height": 250
+                            },
+                            "resolutions": [
+                                {
+                                    "url": "https://g.redditmedia.com/_NJhQv5xWZA9utEDSOXwxStiI8GiSZ0bJo95CKELLPU.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;fm=mp4&amp;mp4-fragmented=false&amp;s=1f3a6685e94a5ed05af53f380602b5bc",
+                                    "width": 108,
+                                    "height": 60
+                                },
+                                {
+                                    "url": "https://g.redditmedia.com/_NJhQv5xWZA9utEDSOXwxStiI8GiSZ0bJo95CKELLPU.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;fm=mp4&amp;mp4-fragmented=false&amp;s=9d7ee25c742963e8ffd4b13004f13763",
+                                    "width": 216,
+                                    "height": 121
+                                },
+                                {
+                                    "url": "https://g.redditmedia.com/_NJhQv5xWZA9utEDSOXwxStiI8GiSZ0bJo95CKELLPU.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;fm=mp4&amp;mp4-fragmented=false&amp;s=5b29ae110b60affe04b97a6a0a5f12d1",
+                                    "width": 320,
+                                    "height": 179
+                                }
+                            ]
+                        }
+                    },
+                    "id": "9S0zLeBzKiwhNMkXF67C-MesxgTbWo7cLEph4hxcbnY"
+                }
+            ],
+            "enabled": true
+        },
+        "thumbnail": "https://b.thumbs.redditmedia.com/EvsLZ9mNXy95TTi91ojTIPOpsbKRbHd9i1Vw7f-dY1A.jpg",
+        "subreddit_id": "t5_2ylxz",
+        "edited": false,
+        "link_flair_css_class": "all",
+        "author_flair_css_class": "001-009",
+        "contest_mode": false,
+        "gilded": 2,
+        "downs": 0,
+        "brand_safe": true,
+        "secure_media_embed": {
+            "content": "&lt;iframe class=\"embedly-embed\" src=\"https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fgfycat.com%2Fifr%2FQuickWaterloggedAmurminnow&amp;url=https%3A%2F%2Fgfycat.com%2Fgifs%2Fdetail%2FQuickWaterloggedAmurminnow&amp;image=https%3A%2F%2Fthumbs.gfycat.com%2FQuickWaterloggedAmurminnow-size_restricted.gif&amp;key=2aa3c4d5f3de4f5b9120b660ad850dc9&amp;type=text%2Fhtml&amp;schema=gfycat\" width=\"600\" height=\"338\" scrolling=\"no\" frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;",
+            "width": 600,
+            "scrolling": false,
+            "media_domain_url": "https://www.redditmedia.com/mediaembed/787hzi",
+            "height": 338
+        },
+        "removal_reason": null,
+        "post_hint": "rich:video",
+        "author_flair_text": "Photoshop - Sony Vegas",
+        "stickied": false,
+        "can_gild": false,
+        "thumbnail_height": 78,
+        "parent_whitelist_status": "all_ads",
+        "name": "t3_787hzi",
+        "spoiler": false,
+        "permalink": "/r/HighQualityGifs/comments/787hzi/petting_a_bird_in_my_backyard/",
+        "subreddit_type": "public",
+        "locked": false,
+        "hide_score": false,
+        "created": 1508791923,
+        "url": "https://gfycat.com/QuickWaterloggedAmurminnow",
+        "whitelist_status": "all_ads",
+        "quarantine": false,
+        "author": "Rskingen",
+        "created_utc": 1508763123,
+        "subreddit_name_prefixed": "r/HighQualityGifs",
+        "ups": 24794,
+        "media": {
+            "oembed": {
+                "provider_url": "http://gfycat.com",
+                "description": "Watch Friendly wild birdie GIF by rskingen on Gfycat. Discover more GIFS online on Gfycat",
+                "title": "Friendly wild birdie - Create, Discover and Share Awesome GIFs on Gfycat",
+                "type": "video",
+                "thumbnail_width": 445,
+                "height": 338,
+                "width": 600,
+                "html": "&lt;iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fgfycat.com%2Fifr%2FQuickWaterloggedAmurminnow&amp;url=https%3A%2F%2Fgfycat.com%2Fgifs%2Fdetail%2FQuickWaterloggedAmurminnow&amp;image=https%3A%2F%2Fthumbs.gfycat.com%2FQuickWaterloggedAmurminnow-size_restricted.gif&amp;key=522baf40bd3911e08d854040d3dc5c07&amp;type=text%2Fhtml&amp;schema=gfycat\" width=\"600\" height=\"338\" scrolling=\"no\" frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;",
+                "version": "1.0",
+                "provider_name": "gfycat",
+                "thumbnail_url": "https://thumbs.gfycat.com/QuickWaterloggedAmurminnow-size_restricted.gif",
+                "thumbnail_height": 250
+            },
+            "type": "gfycat.com"
+        },
+        "num_comments": 440,
+        "is_self": false,
+        "visited": false,
+        "num_reports": null,
+        "is_video": false,
+        "distinguished": null
+    }
+}

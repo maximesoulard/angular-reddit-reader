@@ -1,0 +1,169 @@
+{
+    "kind": "t3",
+    "data": {
+        "domain": "i.imgur.com",
+        "approved_at_utc": null,
+        "banned_by": null,
+        "media_embed": {},
+        "thumbnail_width": 140,
+        "subreddit": "HighQualityGifs",
+        "selftext_html": null,
+        "selftext": "",
+        "likes": null,
+        "suggested_sort": null,
+        "user_reports": [],
+        "secure_media": null,
+        "is_reddit_media_domain": false,
+        "link_flair_text": "Napoleon Dynamite ",
+        "id": "78ex8l",
+        "banned_at_utc": null,
+        "view_count": null,
+        "archived": false,
+        "clicked": false,
+        "report_reasons": null,
+        "title": "MRW I've been secretly in love with someone else's posts",
+        "num_crossposts": 0,
+        "saved": false,
+        "mod_reports": [],
+        "can_mod_post": false,
+        "is_crosspostable": false,
+        "pinned": false,
+        "score": 693,
+        "approved_by": null,
+        "over_18": false,
+        "hidden": false,
+        "preview": {
+            "images": [
+                {
+                    "source": {
+                        "url": "https://i.redditmedia.com/JLcDCsPfd52XEAB67TwUSZ2NdpZaxJWLyxUraP6k-2Y.gif?fm=jpg&amp;s=32df34d357b874140b1f8b87b8f7d721",
+                        "width": 853,
+                        "height": 400
+                    },
+                    "resolutions": [
+                        {
+                            "url": "https://i.redditmedia.com/JLcDCsPfd52XEAB67TwUSZ2NdpZaxJWLyxUraP6k-2Y.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;fm=jpg&amp;s=50b02337759304790829a43b5460a62b",
+                            "width": 108,
+                            "height": 50
+                        },
+                        {
+                            "url": "https://i.redditmedia.com/JLcDCsPfd52XEAB67TwUSZ2NdpZaxJWLyxUraP6k-2Y.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;fm=jpg&amp;s=424a95fc0aa7a801de9b43d1d6085130",
+                            "width": 216,
+                            "height": 101
+                        },
+                        {
+                            "url": "https://i.redditmedia.com/JLcDCsPfd52XEAB67TwUSZ2NdpZaxJWLyxUraP6k-2Y.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;fm=jpg&amp;s=00b90775d9b8f967ff693b666de6c3b8",
+                            "width": 320,
+                            "height": 150
+                        },
+                        {
+                            "url": "https://i.redditmedia.com/JLcDCsPfd52XEAB67TwUSZ2NdpZaxJWLyxUraP6k-2Y.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=640&amp;fm=jpg&amp;s=246e3bec959f1086f13e76db2643bff7",
+                            "width": 640,
+                            "height": 300
+                        }
+                    ],
+                    "variants": {
+                        "gif": {
+                            "source": {
+                                "url": "https://g.redditmedia.com/JLcDCsPfd52XEAB67TwUSZ2NdpZaxJWLyxUraP6k-2Y.gif?s=ae14d42bace9e76531d6c254acd66d87",
+                                "width": 853,
+                                "height": 400
+                            },
+                            "resolutions": [
+                                {
+                                    "url": "https://g.redditmedia.com/JLcDCsPfd52XEAB67TwUSZ2NdpZaxJWLyxUraP6k-2Y.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=874fa1ac8c3f779629ef25369d8df40f",
+                                    "width": 108,
+                                    "height": 50
+                                },
+                                {
+                                    "url": "https://g.redditmedia.com/JLcDCsPfd52XEAB67TwUSZ2NdpZaxJWLyxUraP6k-2Y.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=08121c72deb6e8d850d14adb29fae250",
+                                    "width": 216,
+                                    "height": 101
+                                },
+                                {
+                                    "url": "https://g.redditmedia.com/JLcDCsPfd52XEAB67TwUSZ2NdpZaxJWLyxUraP6k-2Y.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=a58d1fb7d8814d4e0d6724b1e5df6bb3",
+                                    "width": 320,
+                                    "height": 150
+                                },
+                                {
+                                    "url": "https://g.redditmedia.com/JLcDCsPfd52XEAB67TwUSZ2NdpZaxJWLyxUraP6k-2Y.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=640&amp;s=f7f418cb64b8263a2fce07619a4a36cc",
+                                    "width": 640,
+                                    "height": 300
+                                }
+                            ]
+                        },
+                        "mp4": {
+                            "source": {
+                                "url": "https://g.redditmedia.com/JLcDCsPfd52XEAB67TwUSZ2NdpZaxJWLyxUraP6k-2Y.gif?fm=mp4&amp;mp4-fragmented=false&amp;s=debc9f3abdbb77778c77b9339984126a",
+                                "width": 853,
+                                "height": 400
+                            },
+                            "resolutions": [
+                                {
+                                    "url": "https://g.redditmedia.com/JLcDCsPfd52XEAB67TwUSZ2NdpZaxJWLyxUraP6k-2Y.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;fm=mp4&amp;mp4-fragmented=false&amp;s=9c1a9ba3ba95f6019b721a5d14ee9210",
+                                    "width": 108,
+                                    "height": 50
+                                },
+                                {
+                                    "url": "https://g.redditmedia.com/JLcDCsPfd52XEAB67TwUSZ2NdpZaxJWLyxUraP6k-2Y.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;fm=mp4&amp;mp4-fragmented=false&amp;s=429c7b137d5361e3d3fc28ab5bd863a4",
+                                    "width": 216,
+                                    "height": 101
+                                },
+                                {
+                                    "url": "https://g.redditmedia.com/JLcDCsPfd52XEAB67TwUSZ2NdpZaxJWLyxUraP6k-2Y.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;fm=mp4&amp;mp4-fragmented=false&amp;s=f740a3d8cace1287fe3849c377b8ca5a",
+                                    "width": 320,
+                                    "height": 150
+                                },
+                                {
+                                    "url": "https://g.redditmedia.com/JLcDCsPfd52XEAB67TwUSZ2NdpZaxJWLyxUraP6k-2Y.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=640&amp;fm=mp4&amp;mp4-fragmented=false&amp;s=977dc728b40c0c9bedfadbac2744d391",
+                                    "width": 640,
+                                    "height": 300
+                                }
+                            ]
+                        }
+                    },
+                    "id": "UQy_4-NnSm-6hmxCt3NC0XsbKKH0OhRkIwRJUJvmLIw"
+                }
+            ],
+            "enabled": true
+        },
+        "thumbnail": "https://b.thumbs.redditmedia.com/2AuRgHbgZ9oBwiUgcjg9kFfLLpIVhdlDTVLmZiyjWFY.jpg",
+        "subreddit_id": "t5_2ylxz",
+        "edited": false,
+        "link_flair_css_class": "002",
+        "author_flair_css_class": "001-002-003-x1",
+        "contest_mode": false,
+        "gilded": 0,
+        "downs": 0,
+        "brand_safe": true,
+        "secure_media_embed": {},
+        "removal_reason": null,
+        "post_hint": "link",
+        "author_flair_text": "Photoshop - After Effects - Premiere",
+        "stickied": false,
+        "can_gild": false,
+        "thumbnail_height": 65,
+        "parent_whitelist_status": "all_ads",
+        "name": "t3_78ex8l",
+        "spoiler": false,
+        "permalink": "/r/HighQualityGifs/comments/78ex8l/mrw_ive_been_secretly_in_love_with_someone_elses/",
+        "subreddit_type": "public",
+        "locked": false,
+        "hide_score": false,
+        "created": 1508870831,
+        "url": "https://i.imgur.com/yShRBLM.gifv",
+        "whitelist_status": "all_ads",
+        "quarantine": false,
+        "author": "rooster_86",
+        "created_utc": 1508842031,
+        "subreddit_name_prefixed": "r/HighQualityGifs",
+        "ups": 693,
+        "media": null,
+        "num_comments": 20,
+        "is_self": false,
+        "visited": false,
+        "num_reports": null,
+        "is_video": false,
+        "distinguished": null
+    }
+}
