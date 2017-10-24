@@ -6,7 +6,7 @@
         </figure>
         <div class="media-content detailed-content">
             <a (click)=toggleModal()>
-                <img [src]=post.data.url style="max-width: 40%;">
+                <img [src]=post.data.url style="max-width: 60%;">
             </a>
             <ms-image-modal (onImageModalClosed)=onImageModalClosed() [isActive]=isModalActive [url]=post.data.url></ms-image-modal>
         </div>
@@ -20,6 +20,6 @@
         </figure>
         <div class="media-content detailed-content" *ngIf="contentToDisplay != null && state === 'active'" [innerHTML]="contentToDisplay"></div>
         <div class="media-right"></div>
-        <img *ngIf="gifUrl" [src]=gifUrl>
+        <img *ngIf="gifUrl" [src]=gifUrl style="max-width: 60%;">
     </article>
 </section>

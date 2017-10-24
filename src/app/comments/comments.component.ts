@@ -5,6 +5,9 @@ import { Comment } from '../api/model/comment';
 import { trigger, state, animate, transition, style, query } from '@angular/animations';
 import { Location } from '@angular/common';
 import { Post } from '../api/model/post';
+import { Observable } from 'rxjs/Observable';
+
+import 'rxjs/add/operator/first';
 
 @Component({
   selector: 'app-comments',
@@ -38,7 +41,7 @@ import { Post } from '../api/model/post';
 export class CommentsComponent implements OnInit {
   private subreddit: string;
   private postId: string;
-  comments: Comment[];
+  comments: Observable<Comment[]>;
   post: Post;
 
   constructor(private postService: PostService, private route: ActivatedRoute, private location: Location) { }
@@ -47,14 +50,12 @@ export class CommentsComponent implements OnInit {
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.subreddit = params.get('subreddit');
       this.postId = params.get('postId');
-      this.postService.getComments(this.subreddit, this.postId)
-      .subscribe((r: Comment[]) => {
-        this.comments = r
-          .slice(1);
-        this.post = new Post();
-        this.post.data = r[0].data.children[0].data; // The post is always 1st element of comments array
-      });
-      
+      this.comments = this.postService.getComments(this.subreddit, this.postId)
+        .do((cs) => {
+          this.post = new Post();
+          this.post.data = cs[0].data.children[0].data;
+        })
+        .map((cs) => cs.slice(1));
     });
   }
 

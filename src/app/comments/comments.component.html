@@ -3,8 +3,8 @@
 </div>
 <ms-post *ngIf="post" [post]="post"></ms-post>
 <section style="margin-left: 1em; margin-top: 1em;">
-  <div *ngFor="let comment of comments">
-    <div *ngFor="let child of comment.data.children">
+  <div *ngFor="let comment of comments | async">
+    <div *ngFor="let child of comment.data.children" style="border-left: 5px dotted #e4e6e8;">
       <ms-comment [comment]="child"></ms-comment>
     </div>
   </div>
