@@ -10,6 +10,7 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/filter';
 
 @Component({
   selector: 'ms-search',
@@ -45,6 +46,7 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
     this.searchTerms
       .debounceTime(300)        // wait for 300ms pause in events
+      .filter(term => !!term)
       .switchMap(term => term   // switch to new observable each time
         // return the http search observable
         ? this.searchService.searchForASubreddit(term, null)
