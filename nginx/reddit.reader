@@ -1,0 +1,16 @@
+server {
+    listen  80;
+    return  301 https://\$host\$request_uri;
+}
+
+server {
+    listen              443 ssl;
+    ssl_certificate     /var/www/server.crt;
+    ssl_certificate_key /var/www/server.key;
+
+    location / {
+        root /var/www;
+        index index.html index.htm;
+        try_files $uri $uri/ /index.html =404;
+    }
+}
